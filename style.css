@@ -1,0 +1,304 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Satisfy", serif;
+  background-image: url('./src/Assests/pixelcut-export.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  font-family: "Satisfy", serif;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: #ff4b6e;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #ff4b6e;
+  margin: 1.5rem 0 1rem;
+}
+
+.compliment {
+  font-size: 1.5em;
+  color: #333;
+  margin: 2rem 0;
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.mood-section {
+  margin: 1rem 0;
+}
+
+.mood-select {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ff4b6e;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.mood-select:focus {
+  outline: none;
+  border-color: #ff2d55;
+  box-shadow: 0 0 0 2px rgba(255, 45, 85, 0.2);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.name-input,
+.custom-compliment-input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ff4b6e;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.custom-compliment-input {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.name-input:focus,
+.custom-compliment-input:focus {
+  outline: none;
+  border-color: #ff2d55;
+  box-shadow: 0 0 0 2px rgba(255, 45, 85, 0.2);
+}
+
+button {
+  background: #ff4b6e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2em;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background: #ff2d55;
+  transform: scale(1.05);
+}
+
+.fancy-button {
+  position: relative;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+  background-size: 400% 400%;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: gradientRoam 6s ease infinite, 3s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(255, 105, 135, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.fancy-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.6);
+}
+
+/* Gradient background animation */
+@keyframes gradientRoam {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Up and Down Animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+.music-toggle {
+  background: #ff8fa3;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.music-toggle:hover {
+  background: #ff7c94;
+}
+
+.rating-section {
+  margin: 2rem 0;
+}
+
+.rating-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.rating-button {
+  background: #ffb3c1;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.rating-button:hover {
+  background: #ff99ab;
+}
+
+.rating-button.active {
+  background: #ff2d55;
+  transform: scale(1.05);
+}
+
+.share-section {
+  margin-top: 2rem;
+}
+
+.share-url {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ff4b6e;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+}
+
+/* Floating Emoji Animation */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  user-select: none;
+  pointer-events: none;
+  animation: float 4s linear forwards;
+  z-index: 100;
+}
+
+/* Confetti Animation */
+@keyframes confettiFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  user-select: none;
+  pointer-events: none;
+  animation: confettiFall 4s linear forwards;
+  z-index: 90;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(180deg); opacity: 1; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1.2rem;
+  user-select: none;
+  pointer-events: none;
+  animation: sparkle 2s ease-in-out forwards;
+  z-index: 95;
+}
+
+/* Thank You Hug Animation */
+@keyframes hugAppear {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.thank-you-hug {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 5rem;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.thank-you-hug.show {
+  animation: hugAppear 0.5s ease-out forwards;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
